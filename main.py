@@ -148,5 +148,6 @@ class MyForm:
         self.result_canvas.get_tk_widget().grid(row=1, column=1, columnspan=3)
         self.entry.delete(0, END)
 
+
 form = MyForm(root)
 root.mainloop()
