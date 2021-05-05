@@ -27,7 +27,7 @@ def optimize_img(img):
 
 def prediction(img):
     """Function returns array of predictions"""
-    model = keras.models.load_model('C:/deeplearning/models/cnn_mnist2.h5')
+    model = keras.models.load_model('models/cnn_mnist2.h5')
     return model.predict(img)
 
 
@@ -38,6 +38,8 @@ def plot_draw_result(prediction, true_label, img, root):
     ax1 = fig.add_subplot(121)
     ax2 = fig.add_subplot(122)
     ax1.imshow(img, cmap='binary')
+    ax1.set_xticks([])
+    ax1.set_yticks([])
     predicted_label = np.argmax(prediction)
     if predicted_label == true_label:
         color = 'blue'
@@ -48,9 +50,7 @@ def plot_draw_result(prediction, true_label, img, root):
                                              100 * np.max(prediction),
                                              true_label),
                    color=color)
-
     ax2.set_xticks(range(10))
-    ax2.set_yticks([])
     thisplot = ax2.bar(range(10), prediction[0], color="#777777")
     ax2.set_ylim([0, 1])
     predicted_label = np.argmax(prediction)
