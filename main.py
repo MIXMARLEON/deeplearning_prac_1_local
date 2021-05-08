@@ -1,3 +1,11 @@
+import os
+import numpy as np
+import PIL.ImageGrab as ImageGrab
+from tkinter.filedialog import *
+from tensorflow import keras
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib.figure import Figure
+
 """
 
 This program is designed to test a convolutional neural network
@@ -7,17 +15,13 @@ is displayed in the form of a processed image and a bar chart,
 which shows the degree of "confidence" of the network
 that the image corresponds to each of the 10 digits.
 
-"""
-import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-import numpy as np
-import PIL.ImageGrab as ImageGrab
-from tkinter.filedialog import *
-from tensorflow import keras
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-from matplotlib.figure import Figure
 
-root = Tk()  # Creating the window of program.
+Test comm
+
+"""
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = "3"
+root = Tk()  # Creating the window of prgram.
 root.title("MNIST form")
 
 #  These variables store the state of the radio buttons.
@@ -93,11 +97,11 @@ def plot_draw_result(prediction, true_label, img, root):
 
     #  creating bar graph
     ax2.set_xticks(range(10))
-    thisplot = ax2.bar(range(10), prediction[0], color="#777777")
+    this_plot = ax2.bar(range(10), prediction[0], color="#777777")
     ax2.set_ylim([0, 1])
     predicted_label = np.argmax(prediction)
-    thisplot[predicted_label].set_color('red')
-    thisplot[int(true_label)].set_color('blue')
+    this_plot[predicted_label].set_color('red')
+    this_plot[int(true_label)].set_color('blue')
 
     return fig
 
