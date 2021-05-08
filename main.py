@@ -15,9 +15,6 @@ is displayed in the form of a processed image and a bar chart,
 which shows the degree of "confidence" of the network
 that the image corresponds to each of the 10 digits.
 
-
-Test comm
-
 """
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = "3"
