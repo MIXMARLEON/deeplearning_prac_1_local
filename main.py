@@ -45,7 +45,7 @@ def predict(img):
     image corresponds to each of the 10 different numbers.
 
     """
-    model = keras.models.load_model('models/cnn_mnist2.h5')
+    model = keras.models.load_model('models/cnn_mnist_vgg16.h5')
     return model.predict(img)
 
 
