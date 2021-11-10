@@ -1,0 +1,10 @@
+Python 3.7–3.9(in my case worked on 3.6.64)
+
+pillow
+h5py
+matplotlib
+numpy
+pandas
+pip
+tensorflow
+tkinter

@@ -6,6 +6,7 @@ from tensorflow import keras
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 
+
 """
 
 This program is designed to test a convolutional neural network
@@ -18,7 +19,7 @@ that the image corresponds to each of the 10 digits.
 """
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = "3"
-root = Tk()  # Creating the window of prgram.
+root = Tk()  # Creating the window of program.
 root.title("MNIST form")
 
 #  These variables store the state of the radio buttons.
